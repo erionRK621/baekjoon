@@ -1,9 +1,70 @@
 #1330 두 수 비교하기
+a, b = map(int,input().split())
+if a > b:
+    print(">")
+elif a == b:
+    print("==")
+else:
+    print("<")
 
 #9498 시험 성적
 
+score = int(input())
+
+if 90 <= score <= 100:
+    print("A")
+elif  80 <= score < 90:
+    print("B")
+elif  70 <= score < 80:
+    print("C")
+elif  60 <= score < 70:
+    print("D")
+else:
+    print("F")
+
 #2753 윤년
+
+a = int(input())
+
+if a%4==0 and a%100!=0:
+    print("1")
+elif a%4==0 and a%400==0:
+    print("1")
+else:
+    print("0")
 
 #14681 사분면 고르기
 
+a = input()
+b = input()
+
+a = int(a)
+b = int(b)
+
+if a>0 and b>0:
+    print("1")
+elif a<0 and b>0:
+    print("2")
+elif a<0 and b<0:
+    print("3")
+else:
+    print("4")
+
 #2884 알람 시계
+
+h, m = map(int,input().split())
+
+if h == 0 and m < 45:
+    h = 23
+    m = 60 -(45-m)
+    print(h, m)
+elif h != 0 and 45<=m<60:
+    m = m-45
+    print(h, m)
+elif h != 0 and m < 45:
+    h = h-1
+    m = 60 -(45-m)
+    print(h, m)
+else:
+    m = m-45
+    print(h, m)
