@@ -188,5 +188,58 @@ while n != 1:
 
 
 ###############그리디#################################
+
 #11047 동전 0
-n = int(input())
+n, k = map(int,input().split())
+m = [int(input()) for _ in range(n)]
+m.reverse()
+count = 0
+
+for i in m:
+    count += k // i 
+    k %= i
+
+print(count)
+
+#2875 대회 or 인턴
+n, m, k = map(int, input().split())
+count = 0
+
+while n + m >= k + 3 and n >= 2 and m >= 1:
+    n -= 2
+    m -= 1
+    count += 1
+
+print(count)
+
+#10610 30
+n = input()
+n = sorted(n, reverse=True)
+sum = 0
+
+if '0' not in n:
+    print(-1)
+else:
+    for i in n:
+        sum += int(i)
+    if sum%3 !=0:
+        print(-1)
+    else:
+        print(''.join(n))
+
+######틀린 답#########
+n = list(map(int,input()))
+n.sort(reverse=True)
+sum = 0
+
+if 0 not in n:
+    print(-1)
+else:
+    for i in n:
+        sum += int(i)
+    if sum%3 !=0:
+        print(-1)
+    else:
+        print(''.join(n))
+###########################join함수는 리스트안의 문자열을 합쳐주는데 
+###########################list안에 int때문에 정수로 저장이 되어서 안되는듯
