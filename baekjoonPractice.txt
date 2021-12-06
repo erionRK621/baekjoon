@@ -1,0 +1,21 @@
+#1076번 저항
+
+
+color=["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
+
+x = input()
+y = input()
+z = input()
+
+a = color.index(x)
+b = color.index(y)
+c = color.index(z)
+
+num = str(a)+str(b)
+result = int(num)*(10**c)
+
+print(result)
+
+
+#1964번 오각형, 오각형, 오각형…
+
