@@ -170,29 +170,33 @@ else:
 
 #4948번 베르트랑 공준
 
-from math import sqrt
+import math
  
-while True:
+def isPrime(num):
+    if num == 1: return False
+ 
+    for i in range(2, int(math.sqrt(num))+1):
+        if num % i == 0: return False
+ 
+    return True
+ 
+ 
+li = list(range(2,246912))
+prime_li = []
+for i in li:
+    if isPrime(i):
+        prime_li.append(i)
+ 
+while(1):
+    answer = 0
     n = int(input())
-    if n == 0:
-        break
-    
-    cnt = 0
+    if n == 0: break
  
-    for i in range(n+1, 2*n+1):
-        if i == 1:
-            continue
-        elif i == 2:
-            cnt += 1
-            continue
-        else:
-            for j in range(2, int(sqrt(i)+1)):
-                if i % j == 0:
-                    break
-            else:
-                cnt += 1
+    for i in prime_li:
+        if n < i <= n*2:
+            answer += 1
  
-    print(cnt)
+    print(answer)
 
 
 
