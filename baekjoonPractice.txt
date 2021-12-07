@@ -149,3 +149,20 @@ for i in range(test):
         num = n//h
         floor = h
     print(f'{floor*100+num}')
+
+#2839번 설탕 배달
+
+total = int(input())
+count = 0
+
+while total >= 0:
+  if total % 5 == 0:
+    count += int(total // 5)
+    print(count)
+    break
+  
+  total -= 3
+  count += 1
+  
+else:
+  print(-1)
