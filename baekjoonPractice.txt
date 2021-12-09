@@ -279,3 +279,11 @@ for _ in range(t):
     elif sum == 0:
         print("YES")
         
+
+#10960 A+b
+n = int(input())
+
+for _ in range(n):
+  a, b = map(int,input().split())
+
+  print(a+b)
