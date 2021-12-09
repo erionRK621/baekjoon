@@ -329,3 +329,11 @@ while True:
   if a ==0 and b == 0:
     break
   print(a+b)
+
+#10951번 A+B 4
+  while True:
+    try:
+        a, b = map(int, input().split())
+    except:
+        break
+    print(a+b)
