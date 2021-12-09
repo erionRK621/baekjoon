@@ -305,3 +305,15 @@ n = int(input())
 for i in range(n):
   a, b = map(int,sys.stdin.readline().split())
   print("Case #"+str(i+1)+":",a,"+",b,"=",a+b)
+
+
+#10871번 x보다 작은수
+
+import sys
+
+n, x = map(int,input().split())
+a = list(map(int,sys.stdin.readline().split()))
+data = []
+for i in range(n):
+  if a[i] < x:
+    print(a[i], end=" ")
