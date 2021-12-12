@@ -391,3 +391,19 @@ for i in range(a):
         else:
             c = 1
     print(sum)
+
+#4344번 평균은 넘겠지
+n = int(input())
+
+for i in range(n):
+  lists = list(map(int, input().split()))
+  a = lists[0]
+  del lists[0]
+  total = sum(lists)
+  avg = total/a
+  count = 0
+  for j in range(a):    
+    if lists[j] > avg:
+      count += 1
+  ratio = count/a * 100
+  print(f'{ratio:0.3f}%')
