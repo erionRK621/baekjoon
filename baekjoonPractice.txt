@@ -355,3 +355,15 @@ c = int(input())
 result = list(str(a * b * c))
 for i in range(10):
     print(result.count(str(i)))
+
+#3052번 나머지
+
+array = []
+
+for i in range(10):
+  n= int(input())
+  array.append(n % 42)
+
+array = set(array)
+print(len(array))
+
