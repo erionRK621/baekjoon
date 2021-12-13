@@ -446,3 +446,16 @@ sum = 0
 for i in range(n):
     sum += int(num[i])
 print(sum)
+
+
+#10809 알파벳 찾기
+
+word = list(map(str,input()))
+
+for i in range (97, 123):
+  for j in range(0, len(word)):
+    a = -1
+    if chr(i) == word[j]:
+        a = j
+        break
+  print(a, end=' ')
