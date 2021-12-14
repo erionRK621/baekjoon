@@ -470,3 +470,20 @@ for _ in range(n):
   for i in p:
     print(i*r, end="")
   print()
+
+
+#1157번 단어 공부
+
+word = input().upper()
+alpha = list(set(word))
+cnt_list = []
+
+for i in alpha:
+  cnt = word.count(i)
+  cnt_list.append(cnt)
+
+if cnt_list.count(max(cnt_list)) > 1:
+  print("?")
+else:
+  x = cnt_list.index(max(cnt_list))
+  print(alpha[x])
