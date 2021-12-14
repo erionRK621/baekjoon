@@ -487,3 +487,7 @@ if cnt_list.count(max(cnt_list)) > 1:
 else:
   x = cnt_list.index(max(cnt_list))
   print(alpha[x])
+
+#1152번 단어의 개수
+sentence = list(input().split())
+print(len(sentence))
