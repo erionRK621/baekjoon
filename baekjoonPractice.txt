@@ -459,3 +459,14 @@ for i in range (97, 123):
         a = j
         break
   print(a, end=' ')
+
+
+#2675 문자열 반복
+n = int(input())
+
+for _ in range(n):
+  r, p = input().split()
+  r = int(r)
+  for i in p:
+    print(i*r, end="")
+  print()
