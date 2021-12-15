@@ -561,3 +561,13 @@ if b >= c:
 else:
  cnt = a//(c-b) + 1
  print(cnt)
+
+#2292 벌집
+n = int(input())
+
+nums_pileup = 1 
+cnt = 1
+while n > nums_pileup :
+    nums_pileup += 6 * cnt
+    cnt += 1 
+print(cnt)
