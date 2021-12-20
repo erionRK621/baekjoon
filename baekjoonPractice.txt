@@ -669,3 +669,7 @@ for i in range(3):
     if y_nums.count(y_nums[i]) == 1:
         y4 = y_nums[i]
 print(x4, y4)
+
+#1085 직사각형에서 탈출
+x, y, w, h = map(int, input().split())
+print(min(x, y, w-x, h-y))
