@@ -720,3 +720,13 @@ for _ in range(count): #count값 만큼 반복(n이 9이상일 때)
 
 for j in resultStar: #리스트에 저장되어있는 별을 줄마다 출력
     print(j)
+
+#10872 팩토리얼
+def factorial(n):
+    result = 1
+    if n > 0 :
+        result = n * factorial(n-1)
+    return result
+
+n = int(input())
+print(factorial(n))
