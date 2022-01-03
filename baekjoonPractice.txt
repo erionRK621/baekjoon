@@ -815,3 +815,18 @@ for i in range(n-7):
         check(i, j)
  
 print(cnt)
+
+#11651 좌표정렬하기2
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+
+array = []
+for i in range(n):
+    x, y = map(int, input().split())
+    array.append([y, x])
+
+s_array = sorted(array)
+for i in range(n):
+    print(s_array[i][1], s_array[i][0])
